@@ -27,6 +27,11 @@ def create_patron(patron: PatronCreate, db: Session = Depends(get_db)):
     db.refresh(db_patron)
     return db_patron
 
+@app.get("/patrons/", response_model=List[Patron])
+def list_patrons(db: Session = Depends(get_db)):
+    db_patrons = db.query(DBPatron).all()
+    return db_patrons
+
 @app.get("/patrons/{patron_id}", response_model=Patron)
 def read_patron(patron_id: int, db: Session = Depends(get_db)):
     db_patron = db.query(DBPatron).filter(DBPatron.id == patron_id).first()

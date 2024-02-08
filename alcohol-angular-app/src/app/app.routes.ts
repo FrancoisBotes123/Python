@@ -9,7 +9,7 @@ import { AboutUsComponent } from '../app/components/AboutUs/about-us/about-us.co
 import { AppComponent } from './app.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/', pathMatch: 'full' },
+    { path: '', redirectTo: '/add-patron', pathMatch: 'full' },
     { path: 'app', component: AppComponent },
     { path: 'add-patron', component: AddPatronComponent },
     { path: 'add-drink', component: AddDrinkComponent },

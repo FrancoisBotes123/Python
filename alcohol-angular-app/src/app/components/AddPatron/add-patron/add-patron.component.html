@@ -1,1 +1,22 @@
-<p>add-patron works!</p>
+<!-- src/app/components/add-patron/add-patron.component.html -->
+<div *ngIf="isModalOpen" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <form (ngSubmit)="addPatron()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="newPatron.name" name="name" required>
+  
+        <label for="body_mass">Body Mass:</label>
+        <input type="number" id="body_mass" [(ngModel)]="newPatron.body_mass" name="body_mass" required>
+  
+        <button type="submit">Add Patron</button>
+      </form>
+    </div>
+  </div>
+  
+  <button (click)="openModal()">Add Patron</button>
+  
+  <ul>
+    <li *ngFor="let patron of patrons">{{ patron.name }} - {{ patron.body_mass }} kg</li>
+  </ul>
+  
