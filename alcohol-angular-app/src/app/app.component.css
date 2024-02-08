@@ -1,0 +1,45 @@
+/* app.component.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Outermost container that holds everything */
+.container {
+    display: flex;
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px; /* Adjust the width as needed */
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd; /* Add a border to the right of the sidebar */
+}
+
+/* Styling for the sidebar links */
+.sidebar a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #e2e2e2;
+}
+
+/* Main content area where router-outlet will render components */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Scrollable content */
+}
+
+/* It seems you don't need navbar styles here as there's no navbar in the HTML */

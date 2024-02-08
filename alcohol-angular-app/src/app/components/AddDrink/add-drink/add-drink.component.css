@@ -1,0 +1,20 @@
+/* page-not-found.component.css */
+.page-not-found {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .page-not-found h1 {
+    font-size: 3em;
+    color: #ff6b6b;
+  }
+  
+  .page-not-found p {
+    margin: 20px 0;
+  }
+  
+  .page-not-found a {
+    color: #4dabf7;
+    text-decoration: none;
+  }
+  
